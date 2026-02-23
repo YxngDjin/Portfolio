@@ -1,14 +1,16 @@
 import { useState } from "react"
+import BootScreen from "./screens/BootScreen"
+
 
 
 function App() {
   const [systemState, setSystemState] = useState("booting")
   if (systemState === "booting") {
-    return <h1>Loading...</h1>
+    return <BootScreen />
   }
   if (systemState === "login") {
     return (
-      <h1>Login</h1>
+      <BootScreen />
     )
   }
   if (systemState === "desktop") {
